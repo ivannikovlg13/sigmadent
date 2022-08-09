@@ -2,9 +2,7 @@
 @import 'colors';
 @import 'mixins';
 
-
 .accordion {
-
   &__title,
   &__name,
   &__cost {
@@ -28,35 +26,36 @@
     @include strong-middle;
   }
 
-
   &__title {
     background-color: $grey-light;
     @include heading-text;
     padding-left: pxToRem(20px);
     padding-right: pxToRem(20px);
     cursor: pointer;
-    &.active{
-      .accordion__arrow{
-        transition: all .5s;
-        transform: rotate(180deg);
+    .accordion__arrow {
+      transition: all 0.5s;
+    }
+    &.active {
+      .accordion__arrow {
+        transform: rotate(-180deg);
       }
     }
   }
-  &__text{
+  &__text {
     display: none;
   }
-  &__inner{
+  &__inner {
     display: flex;
     margin-top: 15px;
-    &.first{
+    &.first {
       margin-top: 0;
     }
   }
-  &__name{
+  &__name {
     padding-left: pxToRem(20px);
     width: 100%;
   }
-  &__cost{
+  &__cost {
     max-width: pxToRem(195px);
     width: 100%;
     margin-left: pxToRem(15px);
@@ -66,7 +65,4 @@
       max-width: pxToRem(73px);
     }
   }
-
-
 }
-  

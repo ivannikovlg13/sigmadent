@@ -1018,9 +1018,12 @@ a {
     }
 }
 
-.accordion__title.active .accordion__arrow {
+.accordion__title .accordion__arrow {
     transition: all 0.5s;
-    transform: rotate(180deg);
+}
+
+.accordion__title.active .accordion__arrow {
+    transform: rotate(-180deg);
 }
 
 .accordion__text {
@@ -1609,7 +1612,7 @@ ul {
 }
 
 .section__hero .cols > .col .hero-image {
-    background-image: url("../../../assets/images/hero-image.png");
+    background-image: url("../../assets/images/hero-image.png");
     background-size: 100%;
     background-position: right bottom;
     background-repeat: no-repeat;
