@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+// PX to REM
+
+@function pxToRem($px-val) {
+    @return math.div($px-val, 16px) * 1rem;
+}
+
+// PX to EM
+
+@function pxToEm($px-val) {
+    @return math.div($px-val, 14px) * 1em;
+}
+
+// PX to VW
+
+@function pxToVw($target) {
+    $vw-context: (1440*.01) * 1px;
+    @return math.div($target, $vw-context) * 1vw;
+}
